@@ -4,26 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Каталог товаров учебного интернет-магазина.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Учебный интернет-магазин">
-  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
-  <meta property="og:image" content="https://username.github.io/kr1-html-css-shop/images/preview.jpg">
   <title>Каталог товаров — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="site-header">
-      <a class="site-logo" href="index.html">ShopProject</a>
 
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-          <li><a href="index.html#advantages">Преимущества</a></li>
-          <li><a href="index.html#popular">Популярные товары</a></li>
-          <li><a href="index.html#contacts">Обратная связь</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#contacts">Обратная связь</a></li>
         </ul>
       </nav>
     </div>
@@ -31,89 +28,126 @@
 
   <main>
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
-      <a href="index.html">Главная</a>
-      <span>Каталог</span>
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Каталог</span>
     </nav>
 
     <section class="section">
       <h1>Каталог товаров</h1>
-      <p>
-        На этой странице представлен учебный каталог товаров.
-        В дальнейшем здесь будут добавлены фильтры, сортировка и более
-        подробные карточки.
-      </p>
+      <p>На этой странице представлен учебный каталог товаров.</p>
     </section>
 
     <section class="catalog-layout">
       <aside class="catalog-filters">
         <h2>Фильтры</h2>
-
         <form class="filters-form" action="#" method="get">
           <fieldset>
             <legend>Категория</legend>
-
-            <label>
-              <input type="checkbox" name="category" value="all">
-              Все товары
-            </label>
-
-            <label>
-              <input type="checkbox" name="category" value="popular">
-              Популярные
-            </label>
-
-            <label>
-              <input type="checkbox" name="category" value="new">
-              Новинки
-            </label>
+            <label><input type="checkbox" name="category" value="all"> Все товары</label>
+            <label><input type="checkbox" name="category" value="popular"> Популярные</label>
+            <label><input type="checkbox" name="category" value="new"> Новинки</label>
           </fieldset>
-
           <fieldset>
             <legend>Цена</legend>
-
             <label for="price-from">От</label>
             <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
-
             <label for="price-to">До</label>
             <input id="price-to" name="price-to" type="number" min="0" placeholder="5000">
           </fieldset>
-
           <button class="button" type="submit">Применить</button>
         </form>
       </aside>
 
       <section class="catalog-products">
         <h2>Список товаров</h2>
-
         <div class="products-grid">
           <article class="product-card">
-            <h3>Товар 1</h3>
-            <p>Краткое описание учебного товара.</p>
-            <p>Цена: 1000 руб.</p>
-            <a class="button" href="index.html#popular">Подробнее</a>
+            <h3 class="product-card__title">Товар 1</h3>
+            <p class="product-card__description">Краткое описание учебного товара.</p>
+            <p class="product-card__price">Цена: 1000 руб.</p>
+            <button class="button product-card__button" type="button" data-product="Товар 1">Заказать</button>
           </article>
-
           <article class="product-card">
-            <h3>Товар 2</h3>
-            <p>Краткое описание учебного товара.</p>
-            <p>Цена: 1500 руб.</p>
-            <a class="button" href="index.html#popular">Подробнее</a>
+            <h3 class="product-card__title">Товар 2</h3>
+            <p class="product-card__description">Краткое описание учебного товара.</p>
+            <p class="product-card__price">Цена: 1500 руб.</p>
+            <button class="button product-card__button" type="button" data-product="Товар 2">Заказать</button>
           </article>
-
           <article class="product-card">
-            <h3>Товар 3</h3>
-            <p>Краткое описание учебного товара.</p>
-            <p>Цена: 2000 руб.</p>
-            <a class="button" href="index.html#popular">Подробнее</a>
+            <h3 class="product-card__title">Товар 3</h3>
+            <p class="product-card__description">Краткое описание учебного товара.</p>
+            <p class="product-card__price">Цена: 2000 руб.</p>
+            <button class="button product-card__button" type="button" data-product="Товар 3">Заказать</button>
           </article>
         </div>
       </section>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
+
+  <!-- Модальное окно с формой заявки (такое же, как на index.html) -->
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <input id="selected-product" name="selected-product" type="hidden">
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">Имя</label>
+        <input class="order-form__input" id="order-name" name="name" type="text" placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">E-mail</label>
+        <input class="order-form__input" id="order-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-phone">Телефон</label>
+        <input class="order-form__input" id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+        <small>Формат: +7 (900) 000-00-00</small>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-date">Дата связи</label>
+        <input class="order-form__input" id="order-date" name="date" type="date">
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-topic">Тема заявки</label>
+        <select class="order-form__select" id="order-topic" name="topic" required>
+          <option value="">Выберите тему</option>
+          <option value="product">Заказ товара</option>
+          <option value="consultation">Консультация</option>
+          <option value="delivery">Доставка</option>
+        </select>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-comment">Комментарий</label>
+        <textarea class="order-form__textarea" id="order-comment" name="comment" rows="4" placeholder="Укажите дополнительную информацию"></textarea>
+      </div>
+
+      <div class="order-form__field order-form__field--checkbox">
+        <label class="order-form__label">
+          <input id="order-agreement" name="agreement" type="checkbox" required>
+          Я согласен на обработку данных
+        </label>
+      </div>
+
+      <div class="order-form__actions">
+        <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+        <button class="button button--primary" type="submit">Отправить заявку</button>
+      </div>
+    </form>
+  </dialog>
+
+  <p class="success-message" id="success-message" hidden>
+    Форма успешно отправлена!
+  </p>
+
 </body>
 </html>
