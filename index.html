@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Учебный интернет-магазин — главная страница проекта.">
   <title>Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
@@ -14,24 +15,12 @@
       <a class="site-header__logo" href="index.html">ShopProject</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li class="site-nav__item">
-            <a class="site-nav__link site-nav__link--active" href="index.html">Главная</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="contacts.html">Контакты</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
-          </li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#contacts">Обратная связь</a></li>
         </ul>
       </nav>
     </div>
@@ -40,64 +29,56 @@
   <main>
     <section class="hero">
       <h1>Учебный интернет-магазин</h1>
-      <p>
-        Это стартовая страница учебного frontend-проекта.
-        В дальнейшем на её основе будет разработан многостраничный сайт
-        интернет-магазина или каталога услуг.
-      </p>
-      <a class="button" href="#popular">Перейти к товарам</a>
+      <p>Это стартовая страница учебного frontend-проекта, выполненного на максимальный балл.</p>
+      <a class="button button--secondary" href="catalog.html">Перейти в каталог</a>
     </section>
 
     <section class="section" id="advantages">
       <h2>Преимущества проекта</h2>
       <ul class="advantages-list">
-        <li>понятная HTML-структура;</li>
-        <li>семантические блоки страницы;</li>
-        <li>подключение внешнего CSS-файла;</li>
-        <li>подготовка к разработке многостраничного сайта.</li>
+        <li>Семантическая HTML5-разметка;</li>
+        <li>Методология БЭМ для CSS-классов;</li>
+        <li>Использование CSS Grid и Flexbox;</li>
+        <li>Валидация форм и доступность (a11y).</li>
       </ul>
     </section>
 
     <section class="section" id="popular">
       <h2>Популярные товары</h2>
       <div class="products-grid">
-        <article class="product-card">
+        <article class="product-card product-card--hit">
+          <span class="product-card__badge">Хит</span>
           <h3 class="product-card__title">Товар 1</h3>
           <p class="product-card__description">Краткое описание учебного товара.</p>
           <p class="product-card__price">Цена: 1000 руб.</p>
-          <button class="button product-card__button" type="button" data-product="Товар 1">
-            Заказать
-          </button>
+          <div class="product-card__actions">
+            <a class="button button--secondary" href="product.html#product-1">Подробнее</a>
+            <button class="button button--primary product-card__button" type="button" data-product="Товар 1">Заказать</button>
+          </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card product-card--discount">
+          <span class="product-card__badge">Скидка</span>
           <h3 class="product-card__title">Товар 2</h3>
           <p class="product-card__description">Краткое описание учебного товара.</p>
           <p class="product-card__price">Цена: 1500 руб.</p>
-          <button class="button product-card__button" type="button" data-product="Товар 2">
-            Заказать
-          </button>
+          <div class="product-card__actions">
+            <a class="button button--secondary" href="product.html#product-2">Подробнее</a>
+            <button class="button button--primary product-card__button" type="button" data-product="Товар 2">Заказать</button>
+          </div>
         </article>
 
         <article class="product-card">
           <h3 class="product-card__title">Товар 3</h3>
           <p class="product-card__description">Краткое описание учебного товара.</p>
           <p class="product-card__price">Цена: 2000 руб.</p>
-          <button class="button product-card__button" type="button" data-product="Товар 3">
-            Заказать
-          </button>
+          <div class="product-card__actions">
+            <a class="button button--secondary" href="product.html#product-3">Подробнее</a>
+            <button class="button button--primary product-card__button" type="button" data-product="Товар 3">Заказать</button>
+          </div>
         </article>
       </div>
     </section>
-
-    <aside class="aside-info">
-      <h2>Информация для студентов</h2>
-      <p>
-        На следующих практических занятиях этот проект будет расширяться:
-        появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
-        БЭМ-структура и адаптивная версия сайта.
-      </p>
-    </aside>
   </main>
 
   <footer class="site-footer" id="contacts">
@@ -163,6 +144,8 @@
   <p class="success-message" id="success-message" hidden>
     Форма успешно отправлена!
   </p>
+
+  <button class="button button--secondary back-to-top" id="back-to-top" aria-label="Вернуться наверх">↑ Наверх</button>
 
 </body>
 </html>

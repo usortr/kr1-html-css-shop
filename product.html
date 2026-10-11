@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Подробная карточка учебного товара.">
+  <title>Карточка товара — Учебный интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#contacts">Обратная связь</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+      <span class="breadcrumbs__current">Товар</span>
+    </nav>
+
+    <section class="section product-detail" id="product-1">
+      <article class="product-card product-card--hit">
+        <span class="product-card__badge">Хит продаж</span>
+        <div class="product-card__image-placeholder">Изображение товара</div>
+        <div class="product-card__info">
+          <h1 class="product-card__title">Товар 1 (Учебный)</h1>
+          <p class="product-card__description">
+            Это расширенное описание учебного товара. Здесь рассказывается о его преимуществах, 
+            материалах и особенностях использования. Идеально подходит для демонстрации навыков вёрстки.
+          </p>
+          <p class="product-card__price">Цена: 1000 руб.</p>
+          <a class="button button--primary" href="order.html">Оформить заявку</a>
+        </div>
+      </article>
+
+      <aside class="product-specs">
+        <table class="product-table">
+          <caption>Характеристики товара</caption>
+          <thead>
+            <tr>
+              <th scope="col">Параметр</th>
+              <th scope="col">Значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Категория</td>
+              <td>Учебный проект</td>
+            </tr>
+            <tr>
+              <td>Наличие</td>
+              <td>В наличии</td>
+            </tr>
+            <tr>
+              <td>Гарантия</td>
+              <td>1 учебный семестр</td>
+            </tr>
+            <tr>
+              <td>Страна</td>
+              <td>Российская Федерация</td>
+            </tr>
+          </tbody>
+        </table>
+      </aside>
+    </section>
+
+    <section class="section product-detail" id="product-2">
+      <article class="product-card product-card--discount">
+        <span class="product-card__badge">Скидка</span>
+        <div class="product-card__image-placeholder">Изображение товара</div>
+        <div class="product-card__info">
+          <h1 class="product-card__title">Товар 2 (Учебный)</h1>
+          <p class="product-card__description">
+            Описание второго учебного товара. Этот товар доступен со скидкой.
+          </p>
+          <p class="product-card__price">Цена: 1500 руб.</p>
+          <a class="button button--primary" href="order.html">Оформить заявку</a>
+        </div>
+      </article>
+
+      <aside class="product-specs">
+        <table class="product-table">
+          <caption>Характеристики товара</caption>
+          <thead>
+            <tr>
+              <th scope="col">Параметр</th>
+              <th scope="col">Значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Категория</td>
+              <td>Учебный проект</td>
+            </tr>
+            <tr>
+              <td>Наличие</td>
+              <td>В наличии</td>
+            </tr>
+            <tr>
+              <td>Гарантия</td>
+              <td>1 учебный семестр</td>
+            </tr>
+          </tbody>
+        </table>
+      </aside>
+    </section>
+
+    <section class="section product-detail" id="product-3">
+      <article class="product-card">
+        <div class="product-card__image-placeholder">Изображение товара</div>
+        <div class="product-card__info">
+          <h1 class="product-card__title">Товар 3 (Учебный)</h1>
+          <p class="product-card__description">
+            Описание третьего учебного товара.
+          </p>
+          <p class="product-card__price">Цена: 2000 руб.</p>
+          <a class="button button--primary" href="order.html">Оформить заявку</a>
+        </div>
+      </article>
+
+      <aside class="product-specs">
+        <table class="product-table">
+          <caption>Характеристики товара</caption>
+          <thead>
+            <tr>
+              <th scope="col">Параметр</th>
+              <th scope="col">Значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Категория</td>
+              <td>Учебный проект</td>
+            </tr>
+            <tr>
+              <td>Наличие</td>
+              <td>Под заказ</td>
+            </tr>
+          </tbody>
+        </table>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+
+  <button class="button button--secondary back-to-top" id="back-to-top" aria-label="Вернуться наверх">
+    ↑ Наверх
+  </button>
+
+</body>
+</html>

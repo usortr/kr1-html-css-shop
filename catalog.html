@@ -32,20 +32,15 @@
       <span class="breadcrumbs__current">Каталог</span>
     </nav>
 
-    <section class="section">
-      <h1>Каталог товаров</h1>
-      <p>На этой странице представлен учебный каталог товаров.</p>
-    </section>
-
     <section class="catalog-layout">
       <aside class="catalog-filters">
         <h2>Фильтры</h2>
-        <form class="filters-form" action="#" method="get">
+        <form class="filters-form" id="filters-form" action="#" method="get">
           <fieldset>
             <legend>Категория</legend>
-            <label><input type="checkbox" name="category" value="all"> Все товары</label>
-            <label><input type="checkbox" name="category" value="popular"> Популярные</label>
-            <label><input type="checkbox" name="category" value="new"> Новинки</label>
+            <label><input type="checkbox" name="category" value="all" checked> Все товары</label>
+            <label><input type="checkbox" name="category" value="hit"> Хиты продаж</label>
+            <label><input type="checkbox" name="category" value="discount"> Со скидкой</label>
           </fieldset>
           <fieldset>
             <legend>Цена</legend>
@@ -54,30 +49,43 @@
             <label for="price-to">До</label>
             <input id="price-to" name="price-to" type="number" min="0" placeholder="5000">
           </fieldset>
-          <button class="button" type="submit">Применить</button>
+          <button class="button button--primary" type="submit">Применить</button>
         </form>
       </aside>
 
       <section class="catalog-products">
         <h2>Список товаров</h2>
-        <div class="products-grid">
-          <article class="product-card">
+        <div class="products-grid" id="products-grid">
+          <article class="product-card product-card--hit" data-category="hit" data-price="1000">
+            <span class="product-card__badge">Хит</span>
             <h3 class="product-card__title">Товар 1</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1000 руб.</p>
-            <button class="button product-card__button" type="button" data-product="Товар 1">Заказать</button>
+            <p class="product-card__description">Описание товара.</p>
+            <p class="product-card__price">1000 руб.</p>
+            <div class="product-card__actions">
+              <a class="button button--secondary" href="product.html#product-1">Подробнее</a>
+              <button class="button button--primary product-card__button" type="button" data-product="Товар 1">Заказать</button>
+            </div>
           </article>
-          <article class="product-card">
+          
+          <article class="product-card product-card--discount" data-category="discount" data-price="1500">
+            <span class="product-card__badge">Скидка</span>
             <h3 class="product-card__title">Товар 2</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1500 руб.</p>
-            <button class="button product-card__button" type="button" data-product="Товар 2">Заказать</button>
+            <p class="product-card__description">Описание товара.</p>
+            <p class="product-card__price">1500 руб.</p>
+            <div class="product-card__actions">
+              <a class="button button--secondary" href="product.html#product-2">Подробнее</a>
+              <button class="button button--primary product-card__button" type="button" data-product="Товар 2">Заказать</button>
+            </div>
           </article>
-          <article class="product-card">
+
+          <article class="product-card" data-category="all" data-price="2000">
             <h3 class="product-card__title">Товар 3</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 2000 руб.</p>
-            <button class="button product-card__button" type="button" data-product="Товар 3">Заказать</button>
+            <p class="product-card__description">Описание товара.</p>
+            <p class="product-card__price">2000 руб.</p>
+            <div class="product-card__actions">
+              <a class="button button--secondary" href="product.html#product-3">Подробнее</a>
+              <button class="button button--primary product-card__button" type="button" data-product="Товар 3">Заказать</button>
+            </div>
           </article>
         </div>
       </section>
@@ -89,7 +97,6 @@
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
 
-  <!-- Модальное окно с формой заявки (такое же, как на index.html) -->
   <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
     <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
     <form class="order-form" id="order-form" action="#" method="post" novalidate>
@@ -148,6 +155,8 @@
   <p class="success-message" id="success-message" hidden>
     Форма успешно отправлена!
   </p>
+
+  <button class="button button--secondary back-to-top" id="back-to-top" aria-label="Вернуться наверх">↑ Наверх</button>
 
 </body>
 </html>
